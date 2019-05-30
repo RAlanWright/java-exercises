@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Alice {
     public static void main(String[] args){
 
-//        Hello World
+//      Hello World
         System.out.print("What is your name? ");
         Scanner name = new Scanner(System.in);
         String uName = name.nextLine();
@@ -16,7 +16,7 @@ public class Alice {
         System.out.println();
         System.out.println();
 
-//        Area of Rectangle
+//      Area of Rectangle
 //      Rounding the decimal to 4 decimal places
         DecimalFormat df4 = new DecimalFormat("#.####");
         df4.setRoundingMode(RoundingMode.CEILING);
@@ -55,7 +55,7 @@ public class Alice {
         Double gallonsUsed = gallons.nextDouble();
 
         Double mpgCalculation = milesDriven / gallonsUsed;
-        System.out.println("Your vehicle had a fuel economy of: " + df2.format(mpgCalculation) + "MPG");
+        System.out.println("Your vehicle had a fuel economy of: " + df2.format(mpgCalculation) + " MPG");
 
         System.out.println();
         System.out.println();
@@ -67,19 +67,13 @@ public class Alice {
                 "but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice " +
                 "'without pictures or conversation?'";
 
-        Boolean termExists = false;
+
 
         System.out.println("Check to see if a term exists within a string.");
         Scanner term = new Scanner(System.in);
         System.out.println("What term will you search for?");
         String uTerm = term.nextLine();
-
-        if (alice.equalsIgnoreCase(uTerm)){
-            termExists = true;
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
-
+        boolean contains = alice.contains(uTerm);
+        System.out.println("Contains search term: " + contains);
     }
 }

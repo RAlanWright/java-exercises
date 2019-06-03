@@ -38,6 +38,12 @@ public class GradebookHashMap {
         System.out.println("\nClass roster:");
         double sum = 0.0;
 
+        // Test to just access the keys of each item in the map
+//        for (String student : students.keySet())
+//        {
+//            System.out.println(student);
+//        }
+
         for (Map.Entry<String, Double> student : students.entrySet()) {
             System.out.println(student.getKey() + " (" + student.getValue() + ")");
             sum += student.getValue();
